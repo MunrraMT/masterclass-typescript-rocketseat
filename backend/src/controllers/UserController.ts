@@ -26,6 +26,6 @@ export default {
       },
     );
 
-    return res.send('');
+    return res.send();
   },
 };
