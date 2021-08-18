@@ -1,13 +1,12 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
-import User from './components/User';
+import { useState, useEffect } from 'react';
 
+import User from './components/User';
 import api from './services/api';
 
 type TUser = {
   name: string;
   lastName: string;
-  email: string;
+  email?: string;
 };
 
 function App() {

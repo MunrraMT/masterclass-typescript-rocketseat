@@ -3,7 +3,7 @@ import React from 'react';
 type TUser = {
   name: string;
   lastName: string;
-  email: string;
+  email?: string;
 };
 
 type Props = {
@@ -13,9 +13,10 @@ type Props = {
 
 const User = ({ user, children }: Props): JSX.Element => (
   <article>
-    <h2>{user.name}</h2>
-    <p>{user.lastName}</p>
-    <p>{user.email}</p>
+    <h2>
+      {user.name} {user.lastName}
+    </h2>
+    <p>{user.email ? user.email : 'Não possui e-mail.'}</p>
     {children && <p>Observação: {children}</p>}
   </article>
 );
