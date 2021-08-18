@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 
-const users = [{ name: 'Diego', email: 'teste@outlook.com' }];
+const users = [
+  { name: 'André', lastName: 'Rodrigues', email: 'dev-asantos@outlook.com' },
+];
 
 export default {
   async index(req: Request, res: Response) {
