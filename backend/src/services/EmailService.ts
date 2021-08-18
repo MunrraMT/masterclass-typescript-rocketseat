@@ -1,19 +1,19 @@
-interface IMailTo {
+type IMailTo = {
   name: string;
   lastName: string;
   email: string;
-}
+};
 
-interface IMAilMessage {
+type IMAilMessage = {
   subject: string;
   body: string;
   attachment?: string[];
-}
+};
 
-interface IMessageDTO {
+type IMessageDTO = {
   to: IMailTo;
   message: IMAilMessage;
-}
+};
 
 class EmailService {
   sendMail({ to, message }: IMessageDTO) {
