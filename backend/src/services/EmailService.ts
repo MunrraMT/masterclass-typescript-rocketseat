@@ -10,8 +10,13 @@ interface IMAilMessage {
   attachment?: string[];
 }
 
+interface IMessageDTO {
+  to: IMailTo;
+  message: IMAilMessage;
+}
+
 class EmailService {
-  sendMail(to: IMailTo, message: IMAilMessage) {
+  sendMail({ to, message }: IMessageDTO) {
     console.log(
       `Email enviado para ${to.name} ${to.lastName}: ${message.subject}`,
     );
