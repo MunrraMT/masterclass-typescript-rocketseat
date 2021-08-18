@@ -15,7 +15,11 @@ type IMessageDTO = {
   message: IMAilMessage;
 };
 
-class EmailService {
+type IEmailService = {
+  sendMail(request: IMessageDTO): void;
+};
+
+class EmailService implements IEmailService {
   sendMail({ to, message }: IMessageDTO) {
     console.log(
       `Email enviado para ${to.name} ${to.lastName}: ${message.subject}`,
